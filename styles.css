@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  z-index: -2;
+  background: conic-gradient(
+    rgb(135, 31, 215) 0deg,
+    rgb(128, 128, 128, 0.1) 0deg
+  );
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  border-radius: 50%;
+  width: 80px;
+  background-color: white;
+}
+
+.progress {
+  z-index: 2;
+  color: rgb(135, 31, 215);
+}
+
+.btnDiv {
+  margin-top: 20px;
+}
+
+.btnDiv button {
+  padding: 5px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
